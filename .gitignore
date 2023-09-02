@@ -1,5 +1,6 @@
 # envs
 env
+.env
 
 # django 
 *.log
