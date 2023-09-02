@@ -1,4 +1,13 @@
+# envs
 env
-note.txt
+
+# django 
+*.log
+*.pot
+*.pyc
 __pycache__
 db.sqlite3
+media
+
+#vscode
+.vscode/*
