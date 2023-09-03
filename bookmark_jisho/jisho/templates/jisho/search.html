@@ -1,0 +1,21 @@
+{% extends "jisho/base.html" %}
+{% block temp %}
+    <p>{{count}} words found</p>
+    {% if words %}
+        {% for word in words %}
+            <div>
+                <p>{{word.slug}}</p>
+                <p>{{word.jp_word}}</p>
+                <p>{{word.jp_read}}</p>
+                {% for sense in word.senses %}
+                    <p>---</p>
+                    <p>{{sense.sense_def}}</p>
+                    <p>{{sense.sense_pos}}</p>
+                {% endfor %}
+                <p>------------------</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No results found for {{query}}. Did you make a typo?</p>
+    {% endif %}
+{% endblock temp %}
